@@ -1,0 +1,70 @@
+* {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translate(-20%, 0);
+    height: 100vh;
+    background-color: #efefef;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("https://www.hec.edu/sites/default/files/2019-06/Business%20focus-%20banner%20new%20website%20.png");
+}
+
+#submitButton {
+    width: 70%;
+    height: 30px;
+    background-color: #1d93fb;
+    border-radius: 5px;
+}
+
+#submitButton:hover {
+    box-shadow: 2px 2px #1c1c1c;
+}
+
+.input-wrapper {
+    display: flex;
+    width: 40vh;
+    flex-direction: column;
+    gap: 2px;
+    align-items: center;
+}
+
+.input {
+    height: 30px;
+    opacity: 0.5;
+    width: 100%;
+    border-radius: 5px;
+}
+
+
+.form-wrapper {
+    height: 50vh;
+    width: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #a7ccde;
+}
+
+h4,
+h2 {
+    text-align: center;
+
+}
+
+.container {
+    background-color: white;
+    border-radius: 5%;
+    overflow: hidden;
+}
+
+html {
+    height: 100%;
+}

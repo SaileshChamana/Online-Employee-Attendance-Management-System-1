@@ -1,0 +1,231 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>e-Attendance</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cinzel">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;400;500&family=Raleway:wght@100;200;300;400;500&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="/assets/style.css">
+</head>
+<body onload="checkEdits()">
+  <section class="nav">
+    <form method="post" action="/logout" style="z-index: 999;" class="logout-container">
+      <button type="submit" value="Logout">Logout</button>
+    </form>
+    <div class="clock-container">
+      <div class="clock">
+        <div class="needle hour"></div>
+        <div class="needle minute"></div>
+        <div class="needle second"></div>
+        <div class="center-point"></div>
+      </div>
+    </div>
+  <h1 class="span loader"><span class="m"> </span><span class="m"> </span><span class="m"> </span><span class="m"> </span><span class="m"> </span><span class="m">T</span><span class="m">i</span><span class="m">m</span><span class="m">e</span><span class="m">&nbsp;</span><span class="m">T</span><span class="m">r</span><span class="m">a</span><span class="m">c</span><span class="m">k</span><span class="m">k</span><span class="m"> </span><span class="m"> </span></h1>
+  <div class="nav-container"><a class="nav-tab" href="#tab-svelte">HOME</a><a class="nav-tab" href="#tab-esbuild">PROJECTS</a><a class="nav-tab" href="#tab-next">TIMESHEET</a><a class="nav-tab" href="#tab-team">WORKSHEET</a><a class="nav-tab" href="#tab-vite">CONTACT</a><span class="nav-tab-slider"></span></div>
+</section>
+<main class="main">
+  <section class="slider" id="tab-svelte">
+    <h1>ABOUT</h1>
+    <h2><strong>TimeTrackk</strong> is  essential  for organizations to keep track of their employees' attendance and productivity. With the current trend of remote work and work from home, it has become increasingly important to have a system that can accurately track employees' working hours and ensure that they are meeting their job requirements.. It allows managers to monitor their team's attendance, work hours, and productivity, even when they work from different locations. </h2>
+  </section>
+  <section class="slider" id="tab-esbuild">
+    <h1>PROJECTS</h1>
+    <table class="proj-table">
+      <thead>
+        <tr>
+          <th>Project Name</th>
+          <th>% Completed</th>
+          <th>Total Time</th>
+          <th>Start Time</th>
+          <th>End Time</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Project A</td>
+          <td id="edit1" contenteditable="true">30%<br><input type="button" value="save" class="save-button" onclick="saveEdits()"/></td>
+          <td>0 Hours 0 Minutes</td>
+          <td>__:__</td>
+          <td>__:__</td>
+          <td>
+            <button class="start-btn">Start</button>
+            <button class="stop-btn">Stop</button>
+          </td>
+        </tr>
+        <tr>
+          <td>Project B</td>
+          <td id="edit2" contenteditable="true">70%<br><input type="button" value="save" class="save-button" onclick="saveEdits()"/></td>
+          <td>0 Hours 0 Minutes</td>
+          <td>__:__</td>
+          <td>__:__</td>
+          <td>
+            <button class="start-btn">Start</button>
+            <button class="stop-btn">Stop</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    
+</section>
+  <section class="slider timesheet" id="tab-next">
+    <h1>TIMESHEET</h1>
+    <div class="table-wrapper">
+    <table class="timesheet-table">
+        <thead>
+          <tr>
+            <th class="cole" scope="col">Day</th>
+            <th class="cole" scope="col">Date</th>
+            <th class="cole" scope="col">StartTime</th>
+            <th  class="cole"scope="col">EndTime</th>
+            <th class="cole"scope="col">TotalTime</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td scope="row">Monday</th>
+            <td>20-03-2023</td>
+            <td>__:__</td>
+            <td>__:__</td>
+            <td>__:__</td>
+          </tr>
+          <tr>
+            <td scope="row">Tuesday</th>
+            <td>21-03-2023</td>
+            <td>__:__</td>
+            <td>__:__</td>
+            <td>__:__</td>
+          </tr>
+          <tr>
+            <td scope="row">Wednesday</th>
+            <td>22-03-2023</td>
+            <td>__:__</td>
+            <td>__:__</td>
+            <td><__:__></td>
+          </tr>
+          <tr>
+            <td scope="row">Thursday</th>
+            <td>24-03-2023</td>
+            <td>__:__</td>
+            <td>__:__</td>
+            <td>__:__</td>
+          </tr>
+          <tr>
+            <td scope="row">Friday</th>
+            <td>25-03-2023</td>
+            <td>__:__</td>
+            <td>__:__</td>
+            <td>__:__</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+    <section class="worksheet slider" id="tab-team">
+      <h1>WORKSHEET</h1>
+      <div class="att-wrapper">
+        <div class="att-elem">
+          <h2>Working Days</h2>
+          <br>
+          <h1>27</h1>
+        </div>
+        <div class="att-elem">
+          <h2>Leaves Taken</h2>
+          <br>
+          <h1>1</h1>
+        </div>
+        <div class="att-elem">
+          <h2>Public Holidays</h2>
+          <br>
+          <h1>4</h1>
+        </div>
+        <div class="att-elem">
+          <h2>Leaves Available</h2>
+          <h1>6</h1>
+        </div>
+      </div>
+    </section>
+
+  <section class="slider" id="tab-vite">
+    <h1 class="section-header">Contact</h1>
+  
+  <div class="contact-wrapper">
+  
+  
+    
+    <form id="contact-form" class="form-horizontal" role="form" onsubmit="sendEmail(); reset(); return false;">
+       
+      <div class="form-group">
+        <div>
+          <input type="text" class="form-control" id="name" placeholder="ISSUE" name="name" value="" required>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div>
+          <input type="email" class="form-control" id="email" placeholder="EMAIL" name="email" value="" required>
+        </div>
+      </div>
+
+      <textarea class="form-control" rows="10" placeholder="MESSAGE" id="message" name="message" required></textarea>
+      
+      <button class="btn btn-primary send-button" id="submit" type="submit" value="SEND">
+        <div class="alt-send-button">
+          <i class="fa fa-paper-plane"></i><span class="send-text">SEND</span>
+        </div>
+      
+      </button>
+      
+    </form>
+    
+ 
+    
+      <div class="direct-contact-container">
+
+        <ul class="contact-list">
+          <li class="list-item"><i class="fa fa-map-marker fa-2x"><span class="contact-text place">TIMETRACKK, GUDEM</span></i></li>
+          
+          <li class="list-item"><i class="fa fa-phone fa-2x"><span class="contact-text phone"><a href="tel:1-212-555-5555" title="Give me a call">986600xxxx</a></span></i></li>
+          
+          <li class="list-item"><i class="fa fa-envelope fa-2x"><span class="contact-text gmail"><a href="mailto:#" title="Send me an email">hitmeup@gmail.com</a></span></i></li>
+          
+        </ul>
+
+        <hr>
+        <ul class="social-media-list">
+          <li><a href="#" target="_blank" class="contact-icon">
+            <i class="fa fa-facebook" aria-hidden="true"></i></a>
+          </li>
+          <li><a href="#" target="_blank" class="contact-icon">
+            <i class="fa fa-instagram" aria-hidden="true"></i></a>
+          </li>       
+        </ul>
+        <hr>
+
+      </div>
+    
+  </div>
+  </section>
+</main>
+<!-- <canvas class="background"></canvas> -->
+<script type="text/javascript">
+  
+document.querySelector('#contact-form').addEventListener('submit', (e) => {
+    e.preventDefault();
+    e.target.elements.name.value = '';
+    e.target.elements.email.value = '';
+    e.target.elements.message.value = '';
+  });
+
+
+</script>
+<script type="text/javascript" src="/assets/script2.js"></script>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+</body>
+</html>
